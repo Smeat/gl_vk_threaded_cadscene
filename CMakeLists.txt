@@ -40,7 +40,9 @@ endif(SUPPORT_NVTOOLSEXT)
 # add files in PACKAGE_SOURCE_FILES
 #
 _add_package_VulkanSDK()
-_add_package_NSight()
+if(NOT UNIX)
+	_add_package_NSight()
+endif()
 _add_package_AntTweakBar()
 _add_package_ZLIB()
 _add_package_tinythreadpp()
